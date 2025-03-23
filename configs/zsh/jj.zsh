@@ -12,6 +12,8 @@ function pwd_in_jj_or_git() {
   done
 }
 
+# region Replace git_prompt_info with jj_prompt_info when appropriate
+
 # Print jj repository information
 function jj_prompt_info() {
   local jj_or_git="`pwd_in_jj_or_git`"
@@ -111,3 +113,5 @@ function jj_or_git_prompt_info() {
 function git_prompt_info() {
   jj_or_git_prompt_info
 }
+
+# endregion
